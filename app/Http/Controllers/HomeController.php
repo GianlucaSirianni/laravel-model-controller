@@ -12,13 +12,13 @@ class HomeController extends Controller
 
         $all_movies = Movie::all();
 
-        dd($all_movies);
+        //dd($all_movies);
 
         $data = [
             'title' => 'Titoli dei film',
             'movies_all' => $all_movies
         ];
 
-        return view('welcome');
+        return view('welcome', compact('all_movies'));
     }
 }
